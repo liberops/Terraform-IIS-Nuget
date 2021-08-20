@@ -4,9 +4,9 @@
   
 ## CONTEXTE
 
-Il s'agit d'une infrastruture Windows qui déploie, un bastion joignable depuis une adresse IP publique autorisée, qui permet par rebond de se connecter à un serveur Windows IIS.
-Ce serveur IIS est configurer en tant que repo local Nuget pour gérer l'installation de packages chocolatey.
-Dans ce repo seuls trois packages sont déployables: Firefox, Sublimetext et Notepad++
+Ce projet basé sur des instances AWS EC2 Windows déploie:
+- un bastion (joignable depuis une adresse IP publique autorisée), permet par rebond de se connecter à un serveur Windows IIS.
+- ce serveur IIS est configuré en tant que repo local Nuget pour gérer l'installation de packages chocolatey (dans ce repo seuls trois packages sont déployables: Firefox, Sublimetext et Notepad++)
 
 
 ## PREREQUIS
