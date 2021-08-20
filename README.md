@@ -36,7 +36,7 @@ L'infrastructure côté AWS comprend les éléments suivants:
     
 
 
-
+&nbsp;
 
 
 ## PREREQUIS
@@ -95,7 +95,7 @@ L'infrastructure côté AWS comprend les éléments suivants:
    
         
 
-
+&nbsp;
   
 ## RECUPERATION DES FICHIERS
 1. Créer un dossier sur votre poste et nommer-le comme vous le souhaitez, il nous servira pour héberger le git clone.
@@ -110,7 +110,7 @@ L'infrastructure côté AWS comprend les éléments suivants:
   
  
 
-  
+  &nbsp;
   
 ## CREATION DE L'INFRASTRUCTURE
 Vérifier avec `DIR` ce qui se trouve dedans, normalement vous retrouvez ce qu'il y avait dans le dépôt Github cloné
@@ -135,7 +135,7 @@ Après avoir validé par **YES**, la construction de l'infrastructure se lance e
          - L'adresse IP privée du bastion
          - Le mot de passe Administrator du bastion
   
- 
+ &nbsp;
 ## SUPPRESSION DE L'INFRASTRUCTURE
 Pour éviter les coûts, pensez à supprimer votre infrastructure avec la commande:
 
