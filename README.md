@@ -51,6 +51,12 @@ Ce projet, basé sur des instances AWS EC2 Windows, déploie:
            
             Default region name : 
            
+           
+6. Générer une paire de clefs publique/privée que vous nommerez:
+           **- mykey.pem**
+           **- mykey.pub**
+   et que vous stockerez dans le répertoire `data\key-pair`
+   
         
 
 
