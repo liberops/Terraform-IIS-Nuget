@@ -17,21 +17,24 @@
     
 **L'infrastructure côté AWS comprend les éléments suivants:**
 
-   - Un VPC (MyVPC)
+            - Un VPC (MyVPC)
     
-   - Un Public Subnet (MyPublicSubnet)
+            - Un Public Subnet (MyPublicSubnet)
     
-   - Un Private Subnet (MyPrivateSubnet)
+            - Un Private Subnet (MyPrivateSubnet)
     
-   - Une Internet Gateway (MyGateway)
+            - Une Internet Gateway (MyGateway)
     
-   - Un Bucket S3
+            - Un Bucket S3
     
-   - Une NAT Gateway (NAT)
+            - Une NAT Gateway (NAT)
     
-   - Un rôle IAM (ec2_s3_role)
+            - Un rôle IAM (ec2_s3_role)
     
-   - Des Route Table
+            - Des Route Table
+            
+            
+       
     
     
 
