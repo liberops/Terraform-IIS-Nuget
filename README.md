@@ -44,9 +44,13 @@ Ce projet, basé sur des instances AWS EC2 Windows, déploie:
           aws configure
           
    On vous demandera de renseigner les trois éléments ci-dessous:
+   
            `AWS Access Key ID: 
-           AWS Secret Access Key: 
-           Default region name : `
+           
+            AWS Secret Access Key: 
+           
+            Default region name : `
+           
         
 
 
