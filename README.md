@@ -106,4 +106,4 @@ Après avoir validé par **YES**, la construction de l'infrastructure se lance e
 ## SUPPRESSION DE L'INFRASTRUCTURE
 Pour éviter les coûts, pensez à supprimer votre infrastructure avec la commande:
 
-          `terraform destroy`
+          terraform destroy
