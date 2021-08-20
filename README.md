@@ -61,11 +61,24 @@ Vérifier avec `DIR` ce qui se trouve dedans, normalement vous retrouvez ce qu'i
 
 Lancer les commandes Terraform suivantes:
 `$ terraform init
+
 $ terraform plan
+
 $ terraform apply`
 
-Vous allez devoir saisir les informations liées à votre configuration 
-donc les informations personnalisées dans le **docker-compose.yml** 
+
+La construction de l'infrastructure se lance et les outputs Terraform sont générés, ils vous servironst pour vous connecter au bastioin mais également au serveur IIS_Nuget: 
+
+  `- L'instance ID du serveur IIS_nuget
+  - L'adresse IP privée du serveur IIS_nuget
+  - Le DNS public du serveur IIS_nuget
+  - Le mot de passe Administrator du serveur IIS_nuget
+  - L'instance ID du bastion
+  - L'adresse IP privée du bastion
+  - Le mot de passe Administrator du bastion`
+  
+ 
+
 
 
                                                | 
