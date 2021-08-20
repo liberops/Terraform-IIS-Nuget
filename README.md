@@ -4,13 +4,19 @@
   
 ## CONTEXTE
 
-Ce projet basé sur des instances AWS EC2 Windows déploie:
-- un bastion (joignable depuis une adresse IP publique autorisée), permet par rebond de se connecter à un serveur Windows IIS.
-- ce serveur IIS est configuré en tant que repo local Nuget pour gérer l'installation de packages chocolatey (dans ce repo seuls trois packages sont déployables: Firefox, Sublimetext et Notepad++)
+Ce projet, basé sur des instances AWS EC2 Windows, déploie:
+- un bastion (joignable depuis une adresse IP publique autorisée), permettant par rebond de se connecter à un serveur Windows IIS.
+- un serveur IIS configuré en tant que repo local Nuget pour gérer l'installation de packages chocolatey (dans ce repo seuls trois packages sont déployables: Firefox, Sublimetext et Notepad++)
+
+
 
 
 ## PREREQUIS
-1. Ajouter son adresse IP publique (W.X.Y.Z) dans le fichier: `08_security_groups` pour pouvoir se connecter au bastion
+1. Avoir un compte AWS avec des droits suffisants
+
+2. Télécharger Terraform et finaliser l'installation en l'ajoutant à vos variables d'environnement
+
+3. Ajouter son adresse IP publique (W.X.Y.Z) dans le fichier: `08_security_groups` pour pouvoir se connecter au bastion
            
            resource "aws_security_group" "libero-sg-bastion" {
            description = "Allow TLS inbound traffic"
@@ -26,13 +32,13 @@ Ce projet basé sur des instances AWS EC2 Windows déploie:
            
              
 
-2. Exporter les variables d'environnement concernant les credentials AWS 
+4. Exporter les variables d'environnement concernant les credentials AWS 
 
         $ export AWS_ACCESS_KEY_ID="Votre AWS ACCESS KEY ID"
         $ export AWS_SECRET_ACCESS_KEY="Votre AWS SECRET ACCESS KEY"
        
 
-3. Vous pouvez également gérer le profil sur votre poste, qui ira se placer dans:  `~/.aws/credentials`
+5. Vous pouvez également gérer le profil sur votre poste, qui ira se placer dans:  `~/.aws/credentials`
 
         $ aws configure
         $ AWS Access Key ID: Votre AWS ACCESS KEY ID
