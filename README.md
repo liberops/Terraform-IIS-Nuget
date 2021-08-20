@@ -63,6 +63,8 @@ Ce projet, basé sur des instances AWS EC2 Windows, déploie:
 
 2. Cloner le repo contenant les fichiers Terraform avec un  
           `git clone https://github.com/liberops/Terraform-IIS-Nuget.git`  
+          
+3. Se déplacer dans le dossier Terraform-IIS-Nuget
   
  
 
