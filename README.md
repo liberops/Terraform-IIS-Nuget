@@ -49,24 +49,20 @@
   
  
 
-
-
-
-
   
   
 ## CREATION DE L'INFRASTRUCTURE
 En Powershell, aller sur votre dossier de travail créé juste avant pour ce projet
-Vérifier avec `DIR` ce qui se trouve dedans, normalement vous retrouvez ce qu'il yavait dans le dépôt Github cloné
+Vérifier avec `DIR` ce qui se trouve dedans, normalement vous retrouvez ce qu'il y avait dans le dépôt Github cloné
 
 Lancer les commandes Terraform suivantes:
 
 `
-$ terraform init
+**- terraform init**
 
-$ terraform plan
+**- terraform plan**
 
-$ terraform apply
+**- terraform apply**
 `
 
 
