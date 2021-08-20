@@ -13,7 +13,7 @@ Ce projet, basé sur des instances AWS EC2 Windows, déploie:
 
     
     
-    
+   &nbsp; 
     
 L'infrastructure côté AWS comprend les éléments suivants:
 
