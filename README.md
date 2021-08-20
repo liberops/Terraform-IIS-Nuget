@@ -5,8 +5,21 @@
 ## CONTEXTE
 
 Ce projet, basé sur des instances AWS EC2 Windows, déploie:
-- un bastion (joignable depuis une adresse IP publique autorisée), permettant par rebond de se connecter à un serveur Windows IIS.
-- un serveur IIS configuré en tant que repo local Nuget pour gérer l'installation de packages chocolatey (dans ce repo seuls trois packages sont déployables: Firefox, Sublimetext et Notepad++)
+    - un bastion permettant par rebond de se connecter à un serveur Windows IIS. Il n'est joignable que depuis une adresse IP publique autorisée 
+    - un serveur IIS configuré comme repo local Nuget pour déployer des packages chocolatey. Seuls 3 packages sont déployables pour l'exemple: Firefox,           
+      Sublimetext et Notepad++)
+  
+L'infrastructure côté AWS comprend les éléments suivants:
+    - Un VPC (MyVPC)
+    - Un Public Subnet (MyPublicSubnet)
+    - Un Private Subnet (MyPrivateSubnet)
+    - Une Internet Gateway (MyGateway)
+    - Un Bucket S3
+    - Une NAT Gateway (NAT)
+    - Un rôle IAM (ec2_s3_role)
+    - Des Route Table
+    
+
 
 
 
