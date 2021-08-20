@@ -15,6 +15,7 @@ Ce projet, basé sur des instances AWS EC2 Windows, déploie:
 1. Avoir un compte AWS avec des droits suffisants
 
 2. Télécharger Terraform et finaliser l'installation en l'ajoutant à vos variables d'environnement
+    https://learn.hashicorp.com/tutorials/terraform/install-cli
 
 3. Ajouter son adresse IP publique (W.X.Y.Z) dans le fichier: `08_security_groups` pour pouvoir se connecter au bastion
            
@@ -47,9 +48,6 @@ Ce projet, basé sur des instances AWS EC2 Windows, déploie:
         
 
 
-
-  
-  
   
 ## RECUPERATION DES FICHIERS
 1. Créer un dossier et nommer-le comme vous le souhaitez, il nous servira pour héberger le git clone    
@@ -69,7 +67,7 @@ Vérifier avec `DIR` ce qui se trouve dedans, normalement vous retrouvez ce qu'i
 
 Lancer les commandes Terraform suivantes:
 
-       - terraform init
+        - terraform init
 
         - terraform plan
   
