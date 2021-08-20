@@ -35,11 +35,11 @@ Ce projet, basé sur des instances AWS EC2 Windows, déploie:
 
 4. Exporter les variables d'environnement concernant les credentials AWS 
 
-   L'ACCESS_KEY_ID:
+   **L'ACCESS_KEY_ID:**
    
             export AWS_ACCESS_KEY_ID="Votre AWS ACCESS KEY ID"
             
-   Le SECRET_ACCESS_ID:
+   **Le SECRET_ACCESS_ID:**
           
             export AWS_SECRET_ACCESS_KEY="Votre AWS SECRET ACCESS KEY"
        
@@ -89,11 +89,11 @@ Vérifier avec `DIR` ce qui se trouve dedans, normalement vous retrouvez ce qu'i
 
 Lancer les commandes Terraform suivantes:
 
-        - terraform init
+          terraform init
 
-        - terraform plan
+          terraform plan
   
-        - terraform apply
+          terraform apply
 
 
 Après avoir validé par **YES**, la construction de l'infrastructure se lance et les outputs Terraform sont générés, ils vous servironst pour vous connecter au bastion et serveur IIS_Nuget: 
