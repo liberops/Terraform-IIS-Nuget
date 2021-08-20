@@ -57,13 +57,11 @@ Vérifier avec `DIR` ce qui se trouve dedans, normalement vous retrouvez ce qu'i
 
 Lancer les commandes Terraform suivantes:
 
-`
-**- terraform init**
+`**- terraform init**
 
 **- terraform plan**
 
-**- terraform apply**
-`
+**- terraform apply**`
 
 
 La construction de l'infrastructure se lance et les outputs Terraform sont générés, ils vous servironst pour vous connecter au bastioin mais également au serveur IIS_Nuget: 
