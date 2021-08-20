@@ -15,7 +15,7 @@ Ce projet, basé sur des instances AWS EC2 Windows, déploie:
     
    &nbsp; 
     
-L'infrastructure côté AWS comprend les éléments suivants:
+**L'infrastructure côté AWS comprend les éléments suivants:**
 
    - Un VPC (MyVPC)
     
@@ -117,26 +117,26 @@ Vérifier avec `DIR` ce qui se trouve dedans, normalement vous retrouvez ce qu'i
 
 Lancer les commandes Terraform suivantes:
 
-          terraform init
-
-          terraform plan
+             terraform init
   
-          terraform apply
+             terraform plan
+  
+             terraform apply
 
 
 Après avoir validé par **YES**, la construction de l'infrastructure se lance et les outputs Terraform sont générés, ils vous servironst pour vous connecter au bastion et serveur IIS_Nuget: 
 
   
-         - L'instance ID du serveur IIS_nuget
-         - L'adresse IP privée du serveur IIS_nuget
-         - Le DNS public du serveur IIS_nuget
-         - Le mot de passe Administrator du serveur IIS_nuget
-         - L'instance ID du bastion
-         - L'adresse IP privée du bastion
-         - Le mot de passe Administrator du bastion
+            - L'instance ID du serveur IIS_nuget
+            - L'adresse IP privée du serveur IIS_nuget
+            - Le DNS public du serveur IIS_nuget
+            - Le mot de passe Administrator du serveur IIS_nuget
+            - L'instance ID du bastion
+            - L'adresse IP privée du bastion
+            - Le mot de passe Administrator du bastion
   
  &nbsp;
 ## SUPPRESSION DE L'INFRASTRUCTURE
 Pour éviter les coûts, pensez à supprimer votre infrastructure avec la commande:
 
-          terraform destroy
+             terraform destroy
