@@ -1,0 +1,60 @@
+<powershell>
+
+  # Create 2 folders the first one for ZIP files from S3 and the other to dezip them
+  New-Item ${sources_zip} -itemType Directory
+  New-Item ${sources_folder} -itemType Directory
+
+  # Dezip Nuget Web Server files 
+  Read-S3Object -BucketName ${bucket_name}/IIS_Nuget_Server -Key IIS_Nuget_Server.zip -File ${sources_zip}\IIS_Nuget_Server.zip
+  Add-Type -AssemblyName System.IO.Compression.FileSystem
+  function Unzip
+   {
+    param([string]$zipfile, [string]$outpath)
+    [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
+   }
+  Unzip ${sources_zip}\IIS_Nuget_Server.zip ${sources_folder}\IIS_Nuget_Server
+  
+  # Dezip scripts files
+  Read-S3Object -BucketName ${bucket_name}/scripts -Key scripts.zip -File ${sources_zip}\scripts.zip
+  Add-Type -AssemblyName System.IO.Compression.FileSystem
+  function Unzip
+   {
+    param([string]$zipfile, [string]$outpath)
+    [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
+   }
+  Unzip ${sources_zip}\scripts.zip ${sources_folder}\scripts
+
+
+
+
+
+  cd ${sources_folder}\scripts
+
+  .\script_winrm.cmd
+  .\script_install_IIS.ps1
+  .\script_config_Nuget_Server.ps1
+
+
+  # Clean the 2 folders created above
+  Remove-Item -Path ${sources_zip} -Recurse
+  Remove-Item -Path ${sources_folder} -Recurse
+
+  # Configure a tag ready when the ISS nuget will be ready
+  $iis = Get-WebItemState -PSPath "IIS:\Sites\MyNuGetServer" -Protocol "http"  
+  $tag = New-Object Amazon.EC2.Model.Tag
+  $tag.Key = "IIS_Nuget_Server"
+  $tag.Value = "${IIS_Nuget_Ready}"
+  $IIS_nuget_Server_Id = (Invoke-WebRequest -Uri http://169.254.169.254/latest/meta-data/instance-id -UseBasicParsing).Content
+  
+  if ( $iis.Value -eq "Started" ) 
+     { $tag.value = 'Ready' } 
+  Else 
+     { $tag.value = 'Not_Ready' }
+
+  New-EC2Tag -Resource $IIS_nuget_Server_Id -Tag $tag
+
+  
+
+  </powershell>
+
+

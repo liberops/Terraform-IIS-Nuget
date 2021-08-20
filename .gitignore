@@ -1,0 +1,14 @@
+**/Nuget_Packages/
+
+# Local .terraform directories
+.terraform/
+
+# .tfstate files
+*.tfstate
+*.tfstate.backup
+
+# SSH Keys
+*.pem
+
+# Ignored Terraform files
+*gitignore*.tf
