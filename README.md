@@ -39,24 +39,25 @@ Ce projet, basé sur des instances AWS EC2 Windows, déploie:
           export AWS_SECRET_ACCESS_KEY="Votre AWS SECRET ACCESS KEY"
        
 
-5. Vous pouvez également gérer le profil sur votre poste, qui ira se placer dans:  `~/.aws/credentials` en lançant la commande suivante:
+5. Vous pouvez également gérer le profil, qui se placera dans:  `~/.aws/credentials` en lançant la commande suivante:
 
           aws configure
           
    On vous demandera de renseigner les trois éléments ci-dessous:
    
-           `AWS Access Key ID: 
+            AWS Access Key ID: 
            
             AWS Secret Access Key: 
            
-            Default region name : `
+            Default region name : 
            
         
 
 
   
 ## RECUPERATION DES FICHIERS
-1. Créer un dossier et nommer-le comme vous le souhaitez, il nous servira pour héberger le git clone    
+1. Créer un dossier sur votre poste et nommer-le comme vous le souhaitez, il nous servira pour héberger le git clone.
+   En Powershell, aller sur ce nouveau dossier 
 
 
 
@@ -68,7 +69,6 @@ Ce projet, basé sur des instances AWS EC2 Windows, déploie:
   
   
 ## CREATION DE L'INFRASTRUCTURE
-En Powershell, aller sur votre dossier de travail créé juste avant pour ce projet
 Vérifier avec `DIR` ce qui se trouve dedans, normalement vous retrouvez ce qu'il y avait dans le dépôt Github cloné
 
 Lancer les commandes Terraform suivantes:
@@ -80,20 +80,16 @@ Lancer les commandes Terraform suivantes:
         - terraform apply
 
 
-La construction de l'infrastructure se lance et les outputs Terraform sont générés, ils vous servironst pour vous connecter au bastioin mais également au serveur IIS_Nuget: 
+Après avoir validé par **YES**, la construction de l'infrastructure se lance et les outputs Terraform sont générés, ils vous servironst pour vous connecter au bastion et serveur IIS_Nuget: 
 
   
-        `- L'instance ID du serveur IIS_nuget
+         - L'instance ID du serveur IIS_nuget
          - L'adresse IP privée du serveur IIS_nuget
          - Le DNS public du serveur IIS_nuget
          - Le mot de passe Administrator du serveur IIS_nuget
          - L'instance ID du bastion
          - L'adresse IP privée du bastion
-         - Le mot de passe Administrator du bastion`
+         - Le mot de passe Administrator du bastion
   
  
 
-Cliquez sur **Terminer la configuration**  
-
-Votre service Nextcloud est en place avec des données persistantes sur votre machine et tournant avec 2 
-conteneurs Docker linuxserver/nextcloud et linuxserver/mariadb
