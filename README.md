@@ -17,7 +17,7 @@ Ce projet, basé sur des instances AWS EC2 Windows, déploie:
 2. Télécharger Terraform et finaliser l'installation en l'ajoutant à vos variables d'environnement
     https://learn.hashicorp.com/tutorials/terraform/install-cli
 
-3. Ajouter son adresse IP publique (W.X.Y.Z) dans le fichier: `08_security_groups` pour pouvoir se connecter au bastion
+3. Ajouter son adresse IP publique **(W.X.Y.Z)** dans le fichier: `08_security_groups` pour pouvoir se connecter au bastion
            
            resource "aws_security_group" "libero-sg-bastion" {
            description = "Allow TLS inbound traffic"
