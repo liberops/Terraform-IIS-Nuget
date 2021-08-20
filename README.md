@@ -17,11 +17,11 @@
     
 **L'infrastructure côté AWS comprend les éléments suivants:**
 
-            - Un VPC (MyVPC)
+            - Un VPC (MyVPC): 10.0.0.0/16
     
-            - Un Public Subnet (MyPublicSubnet)
+            - Un Public Subnet (MyPublicSubnet): 10.0.2.0/24
     
-            - Un Private Subnet (MyPrivateSubnet)
+            - Un Private Subnet (MyPrivateSubnet): 10.0.3.0/24
     
             - Une Internet Gateway (MyGateway)
     
