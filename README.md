@@ -2,8 +2,14 @@
   
   
   
-## PREREQUIS
+## CONTEXTE
 
+Il s'agit d'une infrastruture Windows qui déploie, un bastion joignable depuis une adresse IP publique autorisée, qui permet par rebond de se connecter à un serveur Windows IIS.
+Ce serveur IIS est configurer en tant que repo local Nuget pour gérer l'installation de packages chocolatey.
+Dans ce repo seuls trois packages sont déployables: Firefox, Sublimetext et Notepad++
+
+
+## PREREQUIS
 1. Ajouter son adresse IP publique (W.X.Y.Z) dans le fichier: `08_security_groups` pour pouvoir se connecter au bastion
            
            resource "aws_security_group" "libero-sg-bastion" {
@@ -14,7 +20,7 @@
              from_port   = 3389
              to_port     = 3389
              protocol    = "tcp"
-             cidr_blocks = **["W.X.Y.Z/32"]**
+             cidr_blocks = ["W.X.Y.Z/32"]
            }
            
            
