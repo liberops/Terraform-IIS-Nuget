@@ -35,9 +35,9 @@ Ce projet, basé sur des instances AWS EC2 Windows, déploie:
 
 4. Exporter les variables d'environnement concernant les credentials AWS 
 
-          export AWS_ACCESS_KEY_ID="Votre AWS ACCESS KEY ID"
+          `export AWS_ACCESS_KEY_ID="Votre AWS ACCESS KEY ID"`
           
-          export AWS_SECRET_ACCESS_KEY="Votre AWS SECRET ACCESS KEY"
+          `export AWS_SECRET_ACCESS_KEY="Votre AWS SECRET ACCESS KEY"`
        
 
 5. Vous pouvez également gérer le profil, qui se placera dans:  `~/.aws/credentials` en lançant la commande suivante:
