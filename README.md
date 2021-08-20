@@ -34,16 +34,16 @@ Ce projet, basé sur des instances AWS EC2 Windows, déploie:
 
 4. Exporter les variables d'environnement concernant les credentials AWS 
 
-        $ export AWS_ACCESS_KEY_ID="Votre AWS ACCESS KEY ID"
-        $ export AWS_SECRET_ACCESS_KEY="Votre AWS SECRET ACCESS KEY"
+          export AWS_ACCESS_KEY_ID="Votre AWS ACCESS KEY ID"
+          export AWS_SECRET_ACCESS_KEY="Votre AWS SECRET ACCESS KEY"
        
 
 5. Vous pouvez également gérer le profil sur votre poste, qui ira se placer dans:  `~/.aws/credentials`
 
-        $ aws configure
-        $ AWS Access Key ID: Votre AWS ACCESS KEY ID
-        $ AWS Secret Access Key: Votre AWS SECRET ACCESS KEY
-        $ Default region name : aws-region
+          aws configure
+          AWS Access Key ID: Votre AWS ACCESS KEY ID
+          AWS Secret Access Key: Votre AWS SECRET ACCESS KEY
+          Default region name : aws-region
         
 
 
@@ -57,7 +57,7 @@ Ce projet, basé sur des instances AWS EC2 Windows, déploie:
 
 
 2. Cloner le repo contenant les fichiers Terraform avec un  
-`git-clone https://github.com/liberops/Terraform-IIS-Nuget.git`  
+          `git-clone https://github.com/liberops/Terraform-IIS-Nuget.git`  
   
  
 
@@ -69,11 +69,11 @@ Vérifier avec `DIR` ce qui se trouve dedans, normalement vous retrouvez ce qu'i
 
 Lancer les commandes Terraform suivantes:
 
-       `- terraform init
+       - terraform init
 
         - terraform plan
   
-        - terraform apply`
+        - terraform apply
 
 
 La construction de l'infrastructure se lance et les outputs Terraform sont générés, ils vous servironst pour vous connecter au bastioin mais également au serveur IIS_Nuget: 
