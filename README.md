@@ -39,12 +39,14 @@ Ce projet, basé sur des instances AWS EC2 Windows, déploie:
           export AWS_SECRET_ACCESS_KEY="Votre AWS SECRET ACCESS KEY"
        
 
-5. Vous pouvez également gérer le profil sur votre poste, qui ira se placer dans:  `~/.aws/credentials`
+5. Vous pouvez également gérer le profil sur votre poste, qui ira se placer dans:  `~/.aws/credentials` en lançant la commande suivante:
 
           aws configure
-          AWS Access Key ID: Votre AWS ACCESS KEY ID
-          AWS Secret Access Key: Votre AWS SECRET ACCESS KEY
-          Default region name : aws-region
+          
+   On vous demandera de renseigner les trois éléments ci-dessous:
+           `AWS Access Key ID: 
+           AWS Secret Access Key: 
+           Default region name : `
         
 
 
