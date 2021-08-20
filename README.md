@@ -4,7 +4,7 @@
   
 ## PREREQUIS
 
-1. Ajouter son adresse IP publique dans le fichier: `08_security_groups` pour pouvoir se connecter au bastion
+1. Ajouter son adresse IP publique (W.X.Y.Z) dans le fichier: `08_security_groups` pour pouvoir se connecter au bastion
            
            resource "aws_security_group" "libero-sg-bastion" {
            description = "Allow TLS inbound traffic"
@@ -14,7 +14,7 @@
              from_port   = 3389
              to_port     = 3389
              protocol    = "tcp"
-             cidr_blocks = ["W.X.Y.Z/32"]
+             cidr_blocks = **["W.X.Y.Z/32"]**
            }
            
            
@@ -76,17 +76,6 @@ La construction de l'infrastructure se lance et les outputs Terraform sont gén�
          - Le mot de passe Administrator du bastion`
   
  
-
-
-
-                                               | 
-    Le répertoire de données est:              | /data
-    La base de données est:                    | MySQL/MariaDB
-    Lutilisateur de la base de données est:    | nextcloud
-    Le mot de passe de la base de données est: | MOTDEPASSE2
-    Le nom de la base de données est:          | nextcloud
-    localhost                                  | mariadb
-
 
 Cliquez sur **Terminer la configuration**  
 
